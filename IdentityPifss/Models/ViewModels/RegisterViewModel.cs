@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+using IdentityPifss.Data;
 namespace IdentityPifss.Models.ViewModels
 {
     public class RegisterViewModel
@@ -14,6 +14,12 @@ namespace IdentityPifss.Models.ViewModels
 
         public string ConfirmPassword { get; set; }
 
-        public string Mobile { get; set; }    
+        public string Mobile { get; set; }
+        
+        public string? City { get; set; }
+
+        public  Genders? Gender { get; set; }
+
+     
     }
 }

@@ -41,6 +41,23 @@
         </tr>
 
         <tr>
+            <td> <label asp-for="City"></label></td>
+            <td>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </td>
+        </tr>
+
+        <td> <label asp-for="Gender"></label> </td>
+        <td>
+            <select asp-for="Gender" asp-items="@Html.GetEnumSelectList<IdentityPifss.Data.Genders>()" class="form-control">
+                <option value="-1"> --- Select Gender ----</option>
+            </select>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </td>
+        </tr>
+
+        <tr>
             <td colspan="2" class="felx flex-fill">
                 <input type="submit" value="Register" class="btn btn-success" />
             </td>

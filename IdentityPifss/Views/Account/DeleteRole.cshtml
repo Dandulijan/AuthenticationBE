@@ -1,0 +1,20 @@
+﻿@model EditRoleViewModel
+@{
+    ViewData["Title"] = "DeleteRole";
+}
+
+<h1>Delete Role</h1>
+
+
+<form asp-action="ConfirmDelete" asp-controller="Account" method="post">
+    <h1>
+        Are you sure to delete
+        <span class="text-danger">
+            @Model.RoleName
+        </span>  ?
+    </h1>
+    @Html.HiddenFor(m => m.RoleName)
+    @Html.HiddenFor(m => m.RoleId)
+    <input type="submit" value="Sure Delete" class="btn btn-danger" />
+    <a asp-action="RolesList" asp-controller="Account" class="btn btn-warning">Cancel</a>
+</form>

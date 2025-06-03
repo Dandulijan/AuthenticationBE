@@ -1,0 +1,24 @@
+﻿@model EditRoleViewModel
+@{
+    ViewData["Title"] = "EditRole";
+}
+
+<h1>EditRole</h1>
+
+<form asp-action="EditRole" method="post">
+    @Html.HiddenFor(x => x.RoleId)
+    <table class="table table-bordered">
+
+        <tr>
+            <td> <label asp-for="RoleName"></label> </td>
+            <td> <input asp-for="RoleName" class="form-control" /> </td>
+        </tr>
+       
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Update" class="btn btn-success" />
+                <a asp-action="RolesList" class="btn btn-primary">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>
